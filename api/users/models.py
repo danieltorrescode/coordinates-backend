@@ -4,8 +4,9 @@ from django.contrib.auth import get_user_model
 User = get_user_model()
 
 
-class Coordinates(models.Model):
-    latitude = models.DecimalField(null=False, decimal_places=5, max_digits=8)
-    longitude = models.DecimalField(null=False, decimal_places=5, max_digits=8)
-    distance = models.DecimalField(null=False, decimal_places=3, max_digits=7)
+class Details(models.Model):
     user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
+    full_name = models.CharField(max_length=255, null=True)
+    latitude = models.DecimalField(null=True, decimal_places=8, max_digits=15)
+    longitude = models.DecimalField(null=True, decimal_places=8, max_digits=15)
+    distance = models.DecimalField(null=True, blank=True, decimal_places=3, max_digits=7)

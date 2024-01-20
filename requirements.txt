@@ -8,6 +8,8 @@ django-cors-headers==4.3.1
 djangorestframework==3.14.0
 exceptiongroup==1.2.0
 executing==2.0.1
+geographiclib==2.0
+geopy==2.4.1
 ipdb==0.13.13
 ipython==8.20.0
 jedi==0.19.1
